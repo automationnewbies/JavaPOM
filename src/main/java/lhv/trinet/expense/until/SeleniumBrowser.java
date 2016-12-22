@@ -10,6 +10,7 @@ import lhv.trinet.gmail.page.GmailLoginPage;
 
 public class SeleniumBrowser {
    private WebDriver driver;
+   private ConfReader conf;
    
    public SeleniumBrowser(){}
    
@@ -18,7 +19,8 @@ public class SeleniumBrowser {
 		  driver = new FirefoxDriver();
 	   	  driver.manage().window().maximize();
 		  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		  driver.get("https://app.trinetexpense.com");
+		  conf = new ConfReader();
+		  driver.get(conf.Get("servertest"));
 	   return new HomePage(driver);
    }
    

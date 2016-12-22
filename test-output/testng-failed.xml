@@ -6,4 +6,16 @@
       <class name="lhv.trinet.expense.TestLoginExpense"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="lhv.trinet.expense.TestLoginExpense">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="verifyUserLoggedSuccessfully"/>
+          <include name="loginExistedExpenseAccount"/>
+        </methods>
+      </class> <!-- lhv.trinet.expense.TestLoginExpense -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

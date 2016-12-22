@@ -1,5 +1,6 @@
 package lhv.trinet.expense;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -23,21 +24,25 @@ public class TestCreateNewExpenseRecord {
 		prepareData();
 		browser = new SeleniumBrowser();
 	}
-	  /*
-	   *  Login Expense
-	   *  Goes to expense active page
-	   *  Create new Basic expense 
-	   */
-	  @Test(priority=0)
-	  public void createNewExpenseAccount() {
-		  expenseHomePage = browser.goToExpensePage();
-		  loginPage = expenseHomePage.goToExpenseLoginPage();
-		  loginPage.loginExpense(account);
-//		  overviewPage.selectExpenseMenu("Expenses");
-		  menu.selectMenu("Expenses", "Deleted");
-	  }
+
+	/*
+	 * Login Expense Goes to expense active page Create new Basic expense
+	 */
+	@Test(priority = 0)
+	public void createNewExpenseAccount() {
+		expenseHomePage = browser.goToExpensePage();
+		loginPage = expenseHomePage.goToExpenseLoginPage();
+		loginPage.loginExpense(account);
+		// overviewPage.selectExpenseMenu("Expenses");
+		menu.selectMenu("Expenses", "Deleted");
+	}
+
+	@AfterClass
+	public void afterClass() {
+		browser.closeBrowser();
+	}
 
 	private void prepareData() {
-		account = new Account.Builder().email("se_companyowner@trinetqa.com").password("Lhvcreate@9").build();
+		account = new Account.Builder().email("brisingrit@yahoo.com").password("eragonuit@A9").build();
 	}
 }

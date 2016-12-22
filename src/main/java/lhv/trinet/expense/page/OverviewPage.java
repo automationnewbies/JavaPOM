@@ -7,7 +7,7 @@ import lhv.trinet.expense.component.Label;
 import lhv.trinet.expense.component.Link;
 import lhv.trinet.expense.component.Menu;
 
-public class OverviewPage{
+public class OverviewPage extends ExpensePage{
 
 
 	private WebDriver driver;
@@ -20,6 +20,7 @@ public class OverviewPage{
 	
 	public OverviewPage(WebDriver driver)
 	{
+		super(driver);
 		this.driver = driver;
 	} 
 

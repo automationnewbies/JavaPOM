@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="21589" started-at="2016-12-22T08:29:46Z" finished-at="2016-12-22T08:30:08Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="21589" started-at="2016-12-22T08:29:46Z" finished-at="2016-12-22T08:30:08Z">
+      <class name="lhv.trinet.expense.TestLoginExpense">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:lhv.trinet.expense.TestLoginExpense@19bb089b]" name="beforeClass" is-config="true" duration-ms="150" started-at="2016-12-22T15:29:46Z" finished-at="2016-12-22T15:29:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="loginExistedExpenseAccount()[pri:0, instance:lhv.trinet.expense.TestLoginExpense@19bb089b]" name="loginExistedExpenseAccount" duration-ms="17687" started-at="2016-12-22T15:29:46Z" finished-at="2016-12-22T15:30:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginExistedExpenseAccount -->
+        <test-method status="PASS" signature="verifyUserLoggedSuccessfully()[pri:0, instance:lhv.trinet.expense.TestLoginExpense@19bb089b]" name="verifyUserLoggedSuccessfully" duration-ms="233" started-at="2016-12-22T15:30:04Z" depends-on-methods="lhv.trinet.expense.TestLoginExpense.loginExistedExpenseAccount" finished-at="2016-12-22T15:30:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoggedSuccessfully -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:lhv.trinet.expense.TestLoginExpense@19bb089b]" name="afterClass" is-config="true" duration-ms="3488" started-at="2016-12-22T15:30:04Z" finished-at="2016-12-22T15:30:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- lhv.trinet.expense.TestLoginExpense -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

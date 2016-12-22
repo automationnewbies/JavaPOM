@@ -18,7 +18,7 @@ public class SeleniumBrowser {
 		  driver = new FirefoxDriver();
 	   	  driver.manage().window().maximize();
 		  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		  driver.get("https://expense01.app7.com/");
+		  driver.get("https://app.trinetexpense.com");
 	   return new HomePage(driver);
    }
    

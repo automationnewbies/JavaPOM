@@ -1,5 +1,6 @@
 package lhv.trinet.expense;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -40,8 +41,13 @@ public class TestLoginExpense {
 	  public void verifyUserLoggedSuccessfully() {
 		  overviewPage.userLoggedShouldBe(account.getEmail());
 	  }
+	  
+	  @AfterClass
+	  public void afterClass(){
+		  browser.closeBrowser();
+	  }
 
 	private void prepareData() {
-		account = new Account.Builder().email("se_companyowner@trinetqa.com").password("Lhvcreate@9").build();
+		account = new Account.Builder().email("receiptexpense@gmail.com").password("Lhvcreate@9").build();
 	}
 }

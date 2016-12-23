@@ -8,10 +8,12 @@ import lhv.trinet.expense.page.HomePage;
 import lhv.trinet.expense.page.LoginPage;
 import lhv.trinet.expense.page.OverviewPage;
 import lhv.trinet.expense.until.Account;
+import lhv.trinet.expense.until.ConfReader;
 import lhv.trinet.expense.until.SeleniumBrowser;
 
 public class TestLoginExpense {
 	private SeleniumBrowser browser;
+	private ConfReader conf;
 	private Account account;
 	private HomePage expenseHomePage;
 	private LoginPage loginPage;
@@ -48,6 +50,7 @@ public class TestLoginExpense {
 	  }
 
 	private void prepareData() {
-		account = new Account.Builder().email("receiptexpense@gmail.com").password("Lhvcreate@9").build();
+		conf = new ConfReader();
+		account = new Account.Builder().email(conf.getPropValues("username")).password(conf.getPropValues("password")).build();
 	}
 }

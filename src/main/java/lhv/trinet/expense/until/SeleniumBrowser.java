@@ -20,7 +20,7 @@ public class SeleniumBrowser {
 	   	  driver.manage().window().maximize();
 		  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		  conf = new ConfReader();
-		  driver.get(conf.Get("servertest"));
+		  driver.get(conf.getPropValues("servertest"));
 	   return new HomePage(driver);
    }
    

@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Expense POM Proj">
+	<!-- <parameter name="browser" value="chrome" /> -->
+	<test name="Login expense page test">
+		<classes>
+			<class name="lhv.trinet.expense.TestLoginExpense" >
+				<methods>
+					<include name="loginExpensePage"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
